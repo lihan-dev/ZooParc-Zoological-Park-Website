@@ -1,0 +1,101 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Aug 29, 2024 at 04:47 PM
+-- Server version: 8.3.0
+-- PHP Version: 8.2.18
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `zooparc_zoo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detailedevents`
+--
+
+DROP TABLE IF EXISTS `detailedevents`;
+CREATE TABLE IF NOT EXISTS `detailedevents` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Event_Name` varchar(100) NOT NULL,
+  `Discription` varchar(300) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `detailedevents`
+--
+
+INSERT INTO `detailedevents` (`ID`, `Event_Name`, `Discription`) VALUES
+(1, 'Unique Panda Experience', 'A unique opportunity to get up close and personal with our gigantic pandas is extended to registered members. A special feeding session, a Q&A session with the zookeepers, and a behind-the-scenes tour of the panda habitat are all included in this program.'),
+(2, 'A Night Safari Adventure', 'This exclusive night safari, available to registered members, allows you to explore the zoo after hours. Take a guided walk to explore the park\'s nocturnal fauna, which provides unique insights into animal behavior after dark.'),
+(3, 'Every Year Gala for Conservation', 'Come celebrate the Annual Conservation Gala with us on a classy evening. In addition to hearing about our most recent conservation initiatives and participating in a silent auction with money going toward wildlife preservation, enjoy a formal supper.'),
+(4, 'An Entire Day of Zoo Keepers', 'Experience working directly with animals for a day as a zookeeper! In order to gain an insider\'s perspective of the day-to-day workings of the zoo, registered members are invited to work alongside our staff, helping with animal care, feeding, and habitat upkeep.'),
+(5, 'Breakfast of appreciation', 'We are thanking you in advance by offering registered members a special breakfast event. Enjoy a delectable dinner, make new friends, and get firsthand information from ZooParc\'s leadership team about forthcoming events and projects.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education`
+--
+
+DROP TABLE IF EXISTS `education`;
+CREATE TABLE IF NOT EXISTS `education` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fullName` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `message` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `education`
+--
+
+INSERT INTO `education` (`id`, `fullName`, `email`, `message`) VALUES
+(1, 'dimuthu', 'dasunudara4@gmail.com', 'bad boys'),
+(2, 'udara', 'udara@gmail.com', 'ifiaohgipa'),
+(9, 'Nimal Supun', 'nimal@gmail.com', 'very attractive zoo'),
+(7, 'udana', 'udana@gmail.com', 'Bad boy'),
+(8, 'kasun ', 'kalhara@gmail.com', 'zoo keeper');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+DROP TABLE IF EXISTS `register`;
+CREATE TABLE IF NOT EXISTS `register` (
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`firstName`, `lastName`, `email`, `password`) VALUES
+('Lihan', 'Amalsha', 'lihanamalsha358@gmail.com', '111111111111'),
+('Lihan', 'Amalsha', 'lihanamalsha358@gmail.com', '123456789'),
+('Lihan', 'Amalsha', 'lihanamalsha358@gmail.com', '123456789'),
+('umindu', 'sandaruwan', 'umindu@gmail.com', 'umaindu123'),
+('Lihan', 'Amalsha', 'lihanamalsha358@gmail.com', '777777777'),
+('moig', 'hsrhs', 'lihanamalsha358@gmail.com', '123456789'),
+('jona', 'gona', 'jonagona@gmail.com', '123456785'),
+('Lihan', 'Amalsha', 'lihanamalsha358@gmail.com', '88888888888'),
+('hsdus', 'afwa', 'udara@gmail.com', 'VUWB123456'),
+('navanjana', 'perera', 'perera@gmail.com', 'nava123456'),
+('kasun', 'kalhara', 'kasun@gmail.com', 'kasun1234'),
+('nimal', 'supun', 'nimal@gmail.com', 'nimal123456'),
+('udara ', 'dasun', 'udaradasun@gmail.com', 'udara12345');
+COMMIT;
